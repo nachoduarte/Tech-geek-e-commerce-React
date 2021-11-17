@@ -1,15 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/main.css';
+import NavBar from './components/NavBar.js';
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          technogeek computadoras - proyecto E-commerce - Juan Ignacio Duarte.
-        </p>
+      <header>
+          <NavBar />
       </header>
+
+      <main className="landingDisplay">
+      
+      <p className="fontReg mainTextColor">
+          Tech-geek computadoras - aun no cargamos nuestros productos!
+      </p>
+
+      </main>
     </div>
   );
 }
