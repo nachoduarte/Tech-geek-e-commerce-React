@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.css';
 import NavBar from './components/NavBar.js';
+import ItemListContainer from './components/ItemListContainer.js';
 
 function App() {
 
@@ -11,12 +12,8 @@ function App() {
           <NavBar />
       </header>
 
-      <main className="landingDisplay">
-      
-      <p className="fontReg mainTextColor">
-          Tech-geek computadoras - aun no cargamos nuestros productos!
-      </p>
-
+      <main>
+          <ItemListContainer greeting="Bienvenido!, aun no cargamos los productos" />
       </main>
     </div>
   );

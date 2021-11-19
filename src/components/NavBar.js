@@ -1,8 +1,9 @@
 import logo from '../images/logo.png';
 import '../styles/main.css';
+import CartWidget from './CartWidget.js';
 
 
-function NavBar(){
+const NavBar = () =>{
 
     return <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,7 +25,7 @@ function NavBar(){
                         </li>
                         <li className="nav-button">
                             <a href="#" className="nav-a fontReg">
-                                Carrito
+                                <CartWidget amount={0} />
                             </a>
                         </li>
                     </ul>

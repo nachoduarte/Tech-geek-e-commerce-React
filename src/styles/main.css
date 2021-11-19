@@ -84,11 +84,16 @@ a {
     position: relative; 
 }
 
+.badge{
+    font-size: .8rem;
+}
+
 /* landing page */
 
 .landingDisplay{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top:120px;
+    justify-content: center;
+    margin-top:150px;
 }
