@@ -1,5 +1,6 @@
 import logo from '../images/logo.png';
 import '../styles/main.css';
+import React from 'react';
 import CartWidget from './CartWidget.js';
 
 
