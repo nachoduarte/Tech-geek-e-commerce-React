@@ -1,0 +1,45 @@
+[{
+    "id":1,
+    "category":"notebooks",
+    "name":"Notebook ASUS x509 15.6'",
+    "description":"Notebook ASUS x509 15.6' Celeron N4020 4GB 500GB Win10",
+    "price":56420,
+    "pictureUrl":"https://res.cloudinary.com/dnwlad3kp/image/upload/v1637962406/compragamer_Imganen_general_21800_Notebook_ASUS_x509_15_udyq3y.png",
+    "stock":5
+},
+{
+    "id":2,
+    "category":"procesadores",
+    "name":"Procesador AMD RYZEN 7 3700X",
+    "description":"Procesador AMD RYZEN 7 3700X 4.4 GHz AM4 Wraith Prism RGB Led Cooler",
+    "price":45900,
+    "pictureUrl":"https://res.cloudinary.com/dnwlad3kp/image/upload/v1637962406/compragamer_Imganen_general_14083_Procesador_AMD_RYZEN_7_3700X_4_th5xlf.png",
+    "stock":5
+},
+{
+    "id":3,
+    "category":"gabinetes",
+    "name":"Gabinete Kolink Phalanx V2",
+    "description":"Gabinete Kolink Phalanx V2 4xCoolers dRGB 120mm",
+    "price":10500,
+    "pictureUrl":"https://res.cloudinary.com/dnwlad3kp/image/upload/v1637962406/compragamer_Imganen_general_23002_Gabinete_Kolink_Phalanx_V2_4xCoolers_dRGB_120mm_ab3d042e-grn_wccezk.png",
+    "stock":10
+},
+{
+    "id":4,
+    "category":"motherboards",
+    "name":"Mother Asrock A320M-HDV",
+    "description":"Mother Asrock A320M-HDV R4.03 Ryzen M-ATX",
+    "price":5800,
+    "pictureUrl":"https://res.cloudinary.com/dnwlad3kp/image/upload/v1637962406/compragamer_Imganen_general_12738_Mother_Asrock_A320M-HDV_R4_dund5z.png",
+    "stock":10
+},
+{
+    "id":5,
+    "category":"notebooks",
+    "name":"Notebook Gamer ASUS TUF FX15 15.6'",
+    "description":"Notebook Gamer ASUS TUF FX15 15.6' Core i5 10300H GTX 1650Ti 4GB 512GB SSD FreeDos",
+    "price":150360,
+    "pictureUrl":"https://res.cloudinary.com/dnwlad3kp/image/upload/v1637962406/compragamer_Imganen_general_28957_Notebook_Gamer_ASUS_TUF_FX15_15_bbqw6x.png",
+    "stock":8
+}]

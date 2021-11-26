@@ -1,15 +1,36 @@
+import React, { useState, useEffect } from 'react';
+import data from '../data/data.json';
+import ItemList from './ItemList.js';
 import ItemCount from './ItemCount.js';
 
-const ItemListContainer = ({greeting}) =>{
+const ItemListContainer = () =>{
 
-    const onAdd = (qty) =>{
-        alert(qty + " productos agregados")
-    }
+
+
+    const [productos, setProductos] = useState([]);
+
+    const getData = () =>{
+        return new Promise ((resolve, reject) =>{
+            setTimeout(() =>{
+                resolve(data);
+                reject("error al cargar productos");
+            }, 2000);
+        });
+    };
+
+    useEffect(() =>{
+        setProductos([]);
+        getData()
+            .then((response) =>setProductos(response))
+            .catch((error) => console.log(error));
+    },[]);
+
 
     return (
-        <div className="landingDisplay">
-            <h1 className="fontReg mainTextColor">{greeting}</h1>
-            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+        <div className="listContainerFather">
+            
+            <ItemList productos={productos}/>
+    
         </div>
     )
 }

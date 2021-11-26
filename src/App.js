@@ -14,7 +14,7 @@ function App() {
       </header>
 
       <main>
-          <ItemListContainer greeting="Bienvenido!, aun no cargamos los productos" />
+          <ItemListContainer  />
       </main>
     </div>
   );

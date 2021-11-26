@@ -97,3 +97,49 @@ a {
     justify-content: center;
     margin-top:150px;
 }
+
+.listContainerFather{
+    display:flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    margin-top:150px;
+}
+
+.listContainerDisplay{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    max-width: 1300px;
+    flex-flow: wrap;
+    align-items:center;
+    
+}
+
+.cardMargin{
+    margin-top: 20px;
+    margin-bottom:20px;
+    padding:0;
+    max-width: 260px;
+    height:500px;
+}
+
+.card{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 260px; 
+    margin-right:10px;
+    margin-left:10px;
+    padding:10px;
+}
+
+.itemButtons{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 2px;
+    margin: 2px;
+    
+}

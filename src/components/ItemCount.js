@@ -17,7 +17,7 @@ const ItemCount = ({stock, initial, onAdd}) =>{
 
     return <>
         <div>
-            <div>
+            <div className="itemButtons">
                 <button className="btn" style={style} onClick={remove}>-</button>
                 <input type="text" className="form-control text-center" placeholder="cantidad" aria-label="Username" aria-describedby="basic-addon1" value={count} id="input"/>
                 <button className="btn" style={style} onClick={add}>+</button>
