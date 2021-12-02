@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import data from '../data/data.json';
 import ItemList from './ItemList.js';
-import ItemCount from './ItemCount.js';
+
 
 const ItemListContainer = () =>{
 
