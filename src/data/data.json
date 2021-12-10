@@ -42,4 +42,50 @@
     "price":150360,
     "pictureUrl":"https://res.cloudinary.com/dnwlad3kp/image/upload/v1637962406/compragamer_Imganen_general_28957_Notebook_Gamer_ASUS_TUF_FX15_15_bbqw6x.png",
     "stock":8
+},
+{
+    "id":6,
+    "category":"placas de video",
+    "name": "Placa de Video Asrock Radeon RX 6600 XT",
+    "description": "Placa de Video Asrock Radeon RX 6600 XT 8GB GDDR6 Challenger D OC",
+    "price": 135000,
+    "pictureUrl": "https://res.cloudinary.com/dnwlad3kp/image/upload/v1639164275/compragamer_Imganen_general_28511_Placa_de_Video_Asrock_Radeon_RX_6600_XT_8GB_GDDR6_Challenger_D_OC_1df4f0e6-grn_tgvjvo.png",
+    "stock":7
+    
+},
+{
+    "id":7,
+    "category":"gabinetes",
+    "name": "Gabinete Kolink Citadel Mesh",
+    "description": "Gabinete Kolink Citadel Mesh RGB 3xCoolers ARGB Vidrio Templado",
+    "price":9600,
+    "pictureUrl": "https://res.cloudinary.com/dnwlad3kp/image/upload/v1639164275/compragamer_Imganen_general_22997_Gabinete_Kolink_Citadel_Mesh_RGB_3xCoolers_ARGB_Vidrio_Templado_2031d0bd-grn_h8qqi7.png",
+    "stock":2
+},
+{
+    "id":8,
+    "category":"gabinetes",
+    "name": "Gabinete Kolink Void",
+    "description": "Gabinete Kolink Void ARGB ATX Vidrio Templado",
+    "price":6450,
+    "pictureUrl": "https://res.cloudinary.com/dnwlad3kp/image/upload/v1639164275/compragamer_Imganen_general_20250_Gabinete_Kolink_Void_ARGB_ATX_Vidrio_Templado_f962dc11-grn_tbhtbb.png",
+    "stock": 10
+},
+{
+    "id":9,
+    "category": "motherboards",
+    "name": "Mother ASUS ROG STRIX B550-F",
+    "description": "Mother ASUS ROG STRIX B550-F GAMING WI-FI AM4 PCI-E 4.0",
+    "price": 32150,
+    "pictureUrl": "https://res.cloudinary.com/dnwlad3kp/image/upload/v1639164275/compragamer_Imganen_general_19215_Mother_ASUS_ROG_STRIX_B550-F_GAMING_WI-FI_AM4_PCI-E_4_ijay0s.png",
+    "stock": 15
+},
+{
+    "id": 10,
+    "category":"placas de video",
+    "name": "Placa de Video Sapphire Radeon RX 6700 XT",
+    "description": "Placa de Video Sapphire Radeon RX 6700 XT 12GB GDDR6 Nitro+ Gaming OC 11306-01-20T",
+    "price": 245000,
+    "pictureUrl": "https://res.cloudinary.com/dnwlad3kp/image/upload/v1639164275/compragamer_Imganen_general_26529_Placa_de_Video_Sapphire_Radeon_RX_6700_XT_12GB_GDDR6_Nitro__Gaming_OC_11306-01-20T_1131f08c-grn_nlkhwo.png",
+    "stock": 8
 }]

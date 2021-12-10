@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.css';
@@ -9,17 +10,30 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header>
-          <NavBar />
-      </header>
 
-      <main>
-          <ItemListContainer  />
+    <Router>
+      <div className="App">
+        <header>
+            <NavBar />
+        </header>
 
-          <ItemDetailContainer />
-      </main>
-    </div>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <ItemListContainer  />
+            </Route>
+
+            <Route exact path="/category/:category">
+              <ItemListContainer  />
+            </Route>
+
+            <Route exact path="/item/:id">
+              <ItemDetailContainer />
+            </Route>
+          </Switch>
+        </main>
+      </div>
+    </Router>
   );
 }
 

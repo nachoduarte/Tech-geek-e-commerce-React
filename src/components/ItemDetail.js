@@ -18,7 +18,7 @@ const ItemDetail = ({producto}) =>{
 
 
     return(
-        <Container className="d-flex justify-content-center">
+        <Container className="d-flex justify-content-center detailDisplay">
             {(name, pictureUrl, description, price, stock) ? (
                 <Card style={{width: "100%"}} className="text-center me-4 mt-3">
                     <Card.Img variant="top" className="mt-3 ps-3 pe-3" src={pictureUrl} />
@@ -27,7 +27,7 @@ const ItemDetail = ({producto}) =>{
                             <h4>{name}</h4>
                         </Card.Title>
                         <Card.Text>{description}</Card.Text>
-                        <h5>{price}</h5>
+                        <h5>${price}</h5>
                         <ItemCount stock={stock} initial={1} onAdd={onAdd} />
                     </Card.Body>
                 </Card>

@@ -1,11 +1,8 @@
 import React from 'react';
-import ItemCount from './ItemCount.js';
+import { Link } from 'react-router-dom';
 
 function Item({product}){
 
-    const onAdd = (qty) =>{
-        alert(qty + " productos agregados")
-    }
 
     return (
         <div className="cardMargin">
@@ -15,7 +12,9 @@ function Item({product}){
                     <h5 className="card-title">{product.name}</h5>
                     <p>Disponibles: {product.stock}</p>
                 </div>
-                <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+                <Link to={`/item/${product.id}`} className="btn mainButtonColor">
+                    Ver más
+                </Link> 
             </div>
         </div>
     )
