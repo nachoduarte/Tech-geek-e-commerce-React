@@ -118,6 +118,7 @@ a {
     max-width: 1300px;
     flex-flow: wrap;
     align-items:center;
+    justify-content: center;
     
 }
 
@@ -147,6 +148,15 @@ a {
     padding: 2px;
     margin: 2px;
     
+}
+
+
+.cartDisplay{
+    margin-top: 150px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .detailDisplay{

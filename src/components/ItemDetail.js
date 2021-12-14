@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import { Card, Container, Spinner } from 'react-bootstrap';
 import ItemCount from './ItemCount.js';
 
@@ -7,8 +8,11 @@ const ItemDetail = ({producto}) =>{
 
     console.log(producto);
 
+    const [count, setCount] = useState(0);
+
     const onAdd = (qty) =>{
         alert(qty + " productos agregados")
+        setCount(qty);
     }
 
 
@@ -28,7 +32,14 @@ const ItemDetail = ({producto}) =>{
                         </Card.Title>
                         <Card.Text>{description}</Card.Text>
                         <h5>${price}</h5>
-                        <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+                        {
+                            count > 0 ? (
+                                <Link to="/cart" className="btn" style={{backgroundColor: "#ED7B30" }}>Ir al carrito</Link>
+                            ) : (
+                                <ItemCount stock={stock} initial={count} onAdd={onAdd} />
+                            )
+                        }
+                        
                     </Card.Body>
                 </Card>
             ) : (
