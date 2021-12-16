@@ -1,7 +1,11 @@
+import React from 'react';
 import cart from '../images/cart.svg';
+import { CartContextUse } from '../context/CartContext.js';
 
 
-const CartWidget = ({amount}) => {
+const CartWidget = () => {
+
+    const {cartProducts} = CartContextUse();
 
     const style = {
         backgroundColor: '#ED7B30'
@@ -10,7 +14,12 @@ const CartWidget = ({amount}) => {
     return (
         <div>
             <img src={cart}/>
-            <span className="badge rounded-pill" style={style}>{amount}</span>
+            {cartProducts > 0 ? (
+                <span className="badge rounded-pill" style={style}>{cartProducts}</span>
+            ) : (
+                ""
+            )}
+            
         </div>
     )
 }

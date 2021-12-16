@@ -18,9 +18,9 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     return <>
         <div>
             <div className="itemButtons">
-                <button className="btn" style={style} onClick={remove}>-</button>
+                <button className="btn mx-2" style={style} onClick={remove}>-</button>
                 <input type="text" className="form-control text-center" placeholder="cantidad" aria-label="Username" aria-describedby="basic-addon1" value={count} id="input"/>
-                <button className="btn" style={style} onClick={add}>+</button>
+                <button className="btn mx-2" style={style} onClick={add}>+</button>
             </div>
             <button onClick={() =>onAdd(count)} type="button" className="btn container-fluid mt-2" style={style}>
                 Agregar al carrito

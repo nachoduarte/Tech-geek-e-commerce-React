@@ -41,9 +41,9 @@ const NavBar = () =>{
                             </NavLink>
                         </li>
                         <li className="nav-button">
-                            <a href="#" className="nav-a fontReg">
-                                <CartWidget amount={0} />
-                            </a>
+                            <NavLink to={`/cart`} activeClassName="currentCategory" className="nav-a fontReg">
+                                <CartWidget />
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

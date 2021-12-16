@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import { Card, Container, Spinner } from 'react-bootstrap';
 import ItemCount from './ItemCount.js';
+import { CartContextUse } from '../context/CartContext.js';
 
 const ItemDetail = ({producto}) =>{
     const { name, description, price, pictureUrl, stock } = producto;
 
+    const { addItem, cart } = CartContextUse();
+
     console.log(producto);
 
-    const [count, setCount] = useState(0);
 
     const onAdd = (qty) =>{
-        alert(qty + " productos agregados")
-        setCount(qty);
+        addItem(producto, qty);
     }
 
 
@@ -32,13 +33,15 @@ const ItemDetail = ({producto}) =>{
                         </Card.Title>
                         <Card.Text>{description}</Card.Text>
                         <h5>${price}</h5>
+                            <ItemCount stock={stock} initial={0} onAdd={onAdd} />
                         {
-                            count > 0 ? (
-                                <Link to="/cart" className="btn" style={{backgroundColor: "#ED7B30" }}>Ir al carrito</Link>
+                            cart.length > 0 ? (
+                                <Link to="/cart" className="btn container-fluid mt-2" style={{backgroundColor: "#ED7B30" }}>Ir al carrito</Link>
                             ) : (
-                                <ItemCount stock={stock} initial={count} onAdd={onAdd} />
+                                console.log("carrito vacio")
                             )
                         }
+                        <Link to="/" className="btn container-fluid mt-2" style={{backgroundColor: "#ED7B30"}}>Volver</Link>
                         
                     </Card.Body>
                 </Card>

@@ -6,12 +6,13 @@ import NavBar from './components/NavBar.js';
 import ItemListContainer from './components/ItemListContainer.js';
 import ItemDetailContainer from './components/ItemDetailContainer.js';
 import Cart from './components/Cart.js';
+import CartContextProvider from './context/CartContext.js';
 
 function App() {
 
 
   return (
-
+    <CartContextProvider>
     <Router>
       <div className="App">
         <header>
@@ -38,6 +39,7 @@ function App() {
         </main>
       </div>
     </Router>
+    </CartContextProvider>
   );
 }
 
