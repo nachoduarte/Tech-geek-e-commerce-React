@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import data from '../data/data.json';
 import ItemList from './ItemList.js';
 import BannerCarousel from './BannerCarousel.js';
+import { db } from '../services/firebase/firebase.js';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 
 const ItemListContainer = () =>{
@@ -15,30 +17,37 @@ const ItemListContainer = () =>{
     console.log(idCategory);
 
 
-    const getData = () =>{
-        return new Promise ((resolve, reject) =>{
-            setTimeout(() =>{
-                if (idCategory) {
-                    const filtroCategory = data.filter(
-                        (item) => item.category === idCategory
-                    );
-                    resolve(filtroCategory);
-                } else {
-                    resolve(data);
-                }
-                reject("error al cargar productos");
-
-            }, 2000);
-        });
-    };
-
     useEffect(() =>{
-        setProductos([]);
-        getData()
-            .then((response) =>setProductos(response))
-            .catch((error) => console.log(error));
+        if(!idCategory){
+            getDocs(collection(db, 'items')).then((querySnapshot) =>{
+                console.log(querySnapshot);
+                const products = querySnapshot.docs.map((doc) =>{
+                    console.log(doc)
+                    return { id: doc.id, ...doc.data()}
+                })
+                setProductos(products);
+            }).catch((error) =>{
+                console.log('Error searching items', error);
+            });
+        } else{
+            getDocs(query(collection(db, 'items'), where('category', '==', idCategory))).then((querySnapshot) =>{
+                console.log(querySnapshot);
+                const products = querySnapshot.docs.map((doc) =>{
+                    console.log(doc)
+                    return { id: doc.id, ...doc.data()}
+                })
+                setProductos(products);
+            }).catch((error) =>{
+                console.log('Error searching items', error);
+            });
+        }
+
+        return(() =>{
+            setProductos([])
+        })
     },[idCategory]);
 
+   
 
     return (
         <>
