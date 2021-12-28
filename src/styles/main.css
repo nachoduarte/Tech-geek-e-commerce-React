@@ -162,3 +162,8 @@ a {
 .detailDisplay{
     margin-top: 150px;
 }
+
+.formDisplay{
+    margin-top:150px;
+    align-items: center;
+}
