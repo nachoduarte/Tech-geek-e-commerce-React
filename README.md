@@ -9,9 +9,9 @@ Once in the project folder you must run `npm i or npm install`
 This will provide you with all the neccesary dependencies to make the app work.
 
 You will also have to install some extra dependencies:
-- firebase@9.6.1 --> for access to the database
-- react-router-dom@5.2 --> for route navigation between components
-- react-bootstrap@2.0.2 --> for styling components
+- `firebase@9.6.1` --> for access to the database
+- `react-router-dom@5.2` --> for route navigation between components
+- `react-bootstrap@2.0.2` --> for styling components
 
 To run the app you type `npm start` on project folder. If after a few minutes doesn´t start automatically, you can go to [http: // localhost: 3000] on your browser.
 
