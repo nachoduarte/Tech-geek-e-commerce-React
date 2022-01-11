@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { CartContextUse } from '../context/CartContext.js';
 import { Container, Button } from 'react-bootstrap';
-import { writeBatch, getDoc, doc, Timestamp, collection, addDoc } from 'firebase/firestore';
+import { writeBatch, Timestamp, collection, addDoc } from 'firebase/firestore';
 import { db } from '../services/firebase/firebase.js';
-import { Link } from 'react-router-dom';
+
 
 
 
 
 const CheckoutForm = () =>{
 
-    const { cart, clear, totalPrice } = CartContextUse();
+    const { cart, totalPrice } = CartContextUse();
 
     const batch = writeBatch(db);
     const outOfStock = [];
@@ -40,17 +40,7 @@ const CheckoutForm = () =>{
             date: Timestamp.fromDate(new Date()),
         };
 
-        /*order.items.forEach((item) =>{
-            getDoc(doc(db, 'items', item.id)).then((documentSnapshot) =>{
-                if(documentSnapshot.data().stock >= item.quantity){
-                    batch.update(doc(db, 'items', documentSnapshot.id), {
-                        stock: documentSnapshot.data().stock - item.quantity
-                    })
-                } else {
-                    outOfStock.push({ id: documentSnapshot.id, ...documentSnapshot.data()})
-                }
-            })
-        })*/
+        
 
         if(outOfStock.length === 0) {
             addDoc(collection(db, 'orders'), order).then(({id}) =>{
@@ -79,23 +69,23 @@ const CheckoutForm = () =>{
                                             <div>
                                                 <h3>Ingrese sus datos para finalizar la compra</h3>
                                             </div>
-                                            <div class="mb-3">
+                                            <div className="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Direccion de Email</label>
                                                 <input type="email" class="form-control" name="email" id="email" required onChange={fillForm} />
                                                 <div id="emailHelp" class="form-text">No compartiremos sus datos con nadie.</div>
                                             </div>
-                                            <div class="mb-3">
+                                            <div className="mb-3">
                                                 <label for="exampleInputPassword1" class="form-label">Nombre</label>
                                                 <input type="text" class="form-control" name="nombre" id="nombre" required onChange={fillForm} />
                                             </div>
-                                            <div class="mb-3">
+                                            <div className="mb-3">
                                                 <label for="exampleInputPassword1" class="form-label">Numero de telefono</label>
                                                 <input type="number" class="form-control" name="telefono" id="telefono" required onChange={fillForm} />
                                             </div>
-                                            <div class="mb-3">
+                                            <div className="mb-3">
                                                 <p>Total de tu compra: ${totalPrice}</p>
                                             </div>
-                                            <Button  class="btn" style={{backgroundColor: "#ED7B30" }} onClick={checkout}>Finalizar Compra</Button>
+                                            <Button  className="btn" style={{backgroundColor: "#ED7B30" }} onClick={checkout}>Finalizar Compra</Button>
                                         </form>
                                         ) : (
                                             <div>

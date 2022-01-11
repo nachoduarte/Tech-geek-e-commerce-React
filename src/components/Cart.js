@@ -1,19 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Button, ListGroup } from 'react-bootstrap';
 import { CartContextUse } from '../context/CartContext.js';
 import { Link } from 'react-router-dom';
-import { db } from '../services/firebase/firebase.js';
-import { addDoc, collection } from 'firebase/firestore'
+
 
 const Cart = () => {
     const { clear, removeItem, cart, totalPrice } = CartContextUse();
 
-    /*const order = {buyer: { name: 'John', phone: 11235879, email: 'john@example.com'}, items: [{id: 1, name: "Notebook ASUS x509 15.6'", price: 56420 }, {id:2, name: "Procesador AMD RYZEN 7 3700X", price: 45900}], total: 102320 }
-
-
-    addDoc(collection(db, 'orders'), order).then(({ id }) => {
-        console.log(id)
-    })*/
 
 
     return (

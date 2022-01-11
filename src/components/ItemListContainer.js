@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../data/data.json';
 import ItemList from './ItemList.js';
 import BannerCarousel from './BannerCarousel.js';
 import { db } from '../services/firebase/firebase.js';
