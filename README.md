@@ -1,7 +1,7 @@
 # Tech-geek Computacion 
 This is an e-commerce project of hardware and computers developed entirely on React JS for Coderhouse's course.
 
-##Installing the environment
+## Installing the environment
 
 in order to run the app on your computer you must have **Node.JS** so you can install all the corresponding modules.
 
@@ -15,7 +15,7 @@ You will also have to install some extra dependencies:
 
 To run the app you type `npm start` on project folder. If after a few minutes doesn´t start automatically, you can go to [http: // localhost: 3000] on your browser.
 
-##Languages 
+## Languages 
 
 This project was developed using
 
@@ -23,7 +23,7 @@ This project was developed using
 -CSS
 -JavaScript
 
-##APP routes 
+## APP routes 
 
 - / -> **ItemListContainer** --> takes you to the landing page
 - /category/:category -> **ItemListContainer** --> takes you to the desired product category on the landing page
@@ -31,7 +31,7 @@ This project was developed using
 - /cart -> **Cart** --> takes you to the cart component
 - /checkout -> **CheckoutForm** --> takes you to the checkout form
 
-##Components and its logics
+## Components and its logics
 
 - `CartContext` it contains the functions and the respective cart array. When you add an item to the cart, it contains an object data of the type {item, quantity}, being **item** the selected product´s data and **quantity** the selected amount of the same element.
 - `ItemListContainer` it contains the functions whose will get the list of items from firebase, and set the entire list of items. It will also have the filter category logic.
