@@ -19,9 +19,9 @@ To run the app you type `npm start` on project folder. If after a few minutes do
 
 This project was developed using
 
--Html5
--CSS
--JavaScript
+- Html5
+- CSS
+- JavaScript
 
 ## APP routes 
 
